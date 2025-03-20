@@ -1,0 +1,175 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
+}
+
+/* 🔷 Login Page */
+#login-container {
+    width: 320px;
+    margin: 100px auto;
+    background: white;
+    padding: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    color: black;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #219150;
+}
+
+#error-msg {
+    color: red;
+}
+
+/* 🔷 Main Container */
+#main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 40px;
+}
+
+/* 🔷 Navigation Bar */
+nav {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #27ae60;
+}
+
+/* 🔷 Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+th {
+    background: #27ae60;
+}
+
+.present {
+    background: green;
+    color: white;
+}
+
+.absent {
+    background: red;
+    color: white;
+}
+
+button.present, button.absent {
+    border: none;
+    padding: 6px 12px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.present {
+    background: green;
+}
+
+button.absent {
+    background: red;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+/* 🔷 Modal Styling */
+#attendance-history-modal, #application-history-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    color: black;
+    z-index: 1000;
+}
+
+#attendance-history-table, #application-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#attendance-history-table th, #attendance-history-table td,
+#application-history-table th, #application-history-table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+}

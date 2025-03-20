@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🔒 Login Page -->
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkLogin()">Login</button>
+        <p id="error-msg"></p>
+    </div>
+
+    <!-- 🏠 Main Content (Hidden Before Login) -->
+    <div id="main-container" style="display: none;">
+        <header>
+            <img src="Screenshot_2025-03-20_220256-removebg-preview.png" alt="Logo" id="logo"> <!-- Replace logo.png -->
+            <h1>Attendance System</h1>
+            <button id="logout" onclick="logout()">Logout</button>
+        </header>
+
+        <!-- ✅ Attendance Section -->
+        <section id="attendance">
+            <h2>Mark Attendance</h2>
+            <p>Date: <span id="current-date"></span></p>
+            <button onclick="viewAttendanceHistory()">📜 View Attendance History</button> <!-- New Button -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Attendance</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="attendance-body"></tbody>
+            </table>
+        </section>
+        
+        <!-- 🔷 Modal for Attendance History -->
+        <div id="attendance-history-modal">
+            <h3>Attendance History</h3>
+            <table id="attendance-history-table"></table>
+            <button onclick="closeAttendanceHistory()">Close</button>
+        </div>
+        
+        <!-- 📌 Applications Section -->
+        <section id="applications">
+            <h2>Application Submissions</h2>
+            <button onclick="viewApplicationHistory()">📜 View Application History</button> <!-- New Button -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Application</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="application-body"></tbody>
+            </table>
+        </section>
+        
+        <!-- 🔷 Modal for Application History -->
+        <div id="application-history-modal">
+            <h3>Application History</h3>
+            <table id="application-history-table"></table>
+            <button onclick="closeApplicationHistory()">Close</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
